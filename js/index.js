@@ -51,13 +51,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     prevBtn.addEventListener("click", (e) => {
+        isDragging = false;
         slideContainer.scrollLeft += -slideWidth;
+        slideContainer.classList.remove("slider-section__slide-container--dragging")
+
 
     });
 
     NextBtn.addEventListener("click", (e) => {
+        isDragging = false;
         slideContainer.scrollLeft += slideWidth;
-
+        slideContainer.classList.remove("slider-section__slide-container--dragging")
     });
 });
 
